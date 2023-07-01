@@ -21,21 +21,22 @@ const ProductDetails = () => {
 }
 //destructure product 
 const {title,price,description,image} =product;
-return <section className='pt-32 pb-12 lg:pg-32 h-screem flex items-center'>
+return <section className='pt-32 pb-12 lg:pg-32 items-center'>
 <div className='container mx-auto'>
   {/*images & text wrapper */}
   <div className='flex flex-col lg:flex-row items-center'>
   {/*image */}
-  <div className='flex flex-col lg:flex-row items-center mb-8 lg:mb-0'>
-    <img className='max-w-[200px] lg:max-w-sm' src ={image} alt=''/>
+  <div className='flex flex-1 justify-center items-center mb-8 lg:mb-0'>
+    <img className='max-w-[150px] lg:max-w-sm' src ={image} alt=''/>
   </div>
   {/*text */}
   <div className='flex-1 text-center lg:text-left'>
-    <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>{title} </h1>
-    <div className='text-xl text-red-500 font-medium mb-6'>${price}</div>
-  </div>
-  <p className='mb-8'>{description}</p>
+    <h1 className='text-[18px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>{title} </h1>
+    <div className='text-xl text-red-500 font-medium mb-6'>${price}
+    </div>
+    <p className='mb-6 text-[14px] lg:text-[16px]'>{description}</p>
   <button onClick={()=> addToCart(product,product.id)} className='bg-primary py-4 px-8 text-white'>Add to Cart</button>
+  </div>
   </div>
 </div>
 </section>
